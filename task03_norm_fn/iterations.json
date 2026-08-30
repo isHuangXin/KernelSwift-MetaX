@@ -1,0 +1,290 @@
+{
+  "title": "MetaX C500: norm_fn Operator Optimization",
+  "subtitle": "KernelSwift Task03 - DeepLink DLBlas auto_bench",
+  "reference": 1.0,
+  "phases": [
+    {
+      "name": "Baseline &\nTriton Fusion",
+      "start": 0,
+      "end": 1,
+      "color": "#cfe8cf"
+    },
+    {
+      "name": "Autotune &\nnum_stages",
+      "start": 2,
+      "end": 5,
+      "color": "#cfe0f5"
+    },
+    {
+      "name": "Fused Cast\n(profiled)",
+      "start": 6,
+      "end": 6,
+      "color": "#fdf3c7"
+    },
+    {
+      "name": "Split-K\nParallelism",
+      "start": 7,
+      "end": 12,
+      "color": "#e6d5f0"
+    },
+    {
+      "name": "Fine\nTuning",
+      "start": 13,
+      "end": 40,
+      "color": "#cfeef0"
+    }
+  ],
+  "iterations": [
+    {
+      "iter": 0,
+      "speedup": 1.0,
+      "status": "kept",
+      "label": "Reference"
+    },
+    {
+      "iter": 1,
+      "speedup": 1.08,
+      "status": "kept",
+      "label": "Triton Fused"
+    },
+    {
+      "iter": 2,
+      "speedup": 2.38,
+      "status": "kept",
+      "label": "Autotune"
+    },
+    {
+      "iter": 3,
+      "speedup": 0.0,
+      "status": "failure",
+      "label": null
+    },
+    {
+      "iter": 4,
+      "speedup": 1.77,
+      "status": "neutral",
+      "label": "tl.dot (slower)"
+    },
+    {
+      "iter": 5,
+      "speedup": 2.39,
+      "status": "kept",
+      "label": "num_stages"
+    },
+    {
+      "iter": 6,
+      "speedup": 2.71,
+      "status": "kept",
+      "label": "Fused cast (profiled)"
+    },
+    {
+      "iter": 7,
+      "speedup": 3.49,
+      "status": "kept",
+      "label": "Split-K (208 prog)"
+    },
+    {
+      "iter": 8,
+      "speedup": 3.49,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 9,
+      "speedup": 3.15,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 10,
+      "speedup": 3.01,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 11,
+      "speedup": 0.7,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 12,
+      "speedup": 3.06,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 13,
+      "speedup": 0.0,
+      "status": "failure",
+      "label": null
+    },
+    {
+      "iter": 14,
+      "speedup": 3.42,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 15,
+      "speedup": 3.16,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 16,
+      "speedup": 3.0,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 17,
+      "speedup": 3.48,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 18,
+      "speedup": 2.92,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 19,
+      "speedup": 2.98,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 20,
+      "speedup": 3.22,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 21,
+      "speedup": 3.19,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 22,
+      "speedup": 3.16,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 23,
+      "speedup": 0.95,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 24,
+      "speedup": 3.04,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 25,
+      "speedup": 3.2,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 26,
+      "speedup": 0.0,
+      "status": "failure",
+      "label": null
+    },
+    {
+      "iter": 27,
+      "speedup": 0.0,
+      "status": "failure",
+      "label": null
+    },
+    {
+      "iter": 28,
+      "speedup": 3.54,
+      "status": "neutral",
+      "label": "retest peak"
+    },
+    {
+      "iter": 29,
+      "speedup": 2.85,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 30,
+      "speedup": 3.47,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 31,
+      "speedup": 3.48,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 32,
+      "speedup": 3.51,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 33,
+      "speedup": 3.52,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 34,
+      "speedup": 3.49,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 35,
+      "speedup": 3.51,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 36,
+      "speedup": 3.51,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 37,
+      "speedup": 3.49,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 38,
+      "speedup": 3.51,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 39,
+      "speedup": 3.49,
+      "status": "neutral",
+      "label": null
+    },
+    {
+      "iter": 40,
+      "speedup": 3.5,
+      "status": "kept",
+      "label": "Final (evict_first)"
+    }
+  ],
+  "final_callout": {
+    "text": "Final ~3.5x (peak 3.54x)",
+    "y": 4.4
+  },
+  "hardware_box": "MetaX C500 (16GB sGPU)\nMACA 3.5.3.20 | torch 2.8 metax | triton 3.0\nwarmup=200 repeat=500 | atol=rtol=1e-2"
+}
