@@ -38,6 +38,18 @@ DeepLink DLBlas `auto_bench.py` 评测（正确性校验 + 加速比测速）。
 
 见 `RESULTS.md`。
 
+
+### 优化轨迹图
+
+**Task01 engram_hash（~3.47x）**
+![Task01 优化轨迹](task01_engram_hash/task01_progress.png)
+
+**Task02 Indexer（~1.87x）**
+![Task02 优化轨迹](task02_indexer/task02_progress.png)
+
+**Task03 norm_fn（~3.47x）**
+![Task03 优化轨迹](task03_norm_fn/task03_progress.png)
+
 ## 四、原创声明
 
 本作品全部算子实现由参赛者独立完成，基于赛题给定的 torch reference 进行 Triton 重写与优化。
