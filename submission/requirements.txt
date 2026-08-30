@@ -1,0 +1,17 @@
+# 环境配置 —— KernelSwift 赛道二（沐曦 C500）
+#
+# 硬件：MetaX C500
+# 系统驱动：MACA 3.5.3.20（Kernel Mode Driver 3.8.30，MX-SMI 2.2.12）
+# Python：3.12（大赛推荐 3.10，本作品在 3.12 上开发验证）
+#
+# 核心依赖（沐曦定制版，随 MACA 环境提供，pip 安装以官方 wheel 为准）：
+torch==2.8.0+metax3.5.3.9
+triton==3.0.0+metax3.5.3.9
+numpy<2          # 注意：numpy 2.x 会与 metax torch 不兼容，须 <2（如 1.26.4）
+#
+# 评测框架（从 GitHub 获取）：
+# https://github.com/DeepLink-org/DLBlas
+#   benchmarks/ks/auto_bench.py
+#
+# 说明：torch/triton 为沐曦 MACA 环境内置，非公开 PyPI 包，
+#       需在已配置 MACA 的 C500 环境中运行。
