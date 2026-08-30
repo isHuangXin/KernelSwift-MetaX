@@ -15,6 +15,18 @@ KernelSwift 赛道二（沐曦 MetaX C500）三个算子的 Triton 优化实现�
 | Task02 | Indexer | ~1.875x | einsum+relu+加权求和+mask 融合成单 kernel + BLOCK_S 分块摊薄 kv 访存 + 因果 early-skip + pipeline |
 | Task03 | norm_fn | ~3.5x | Triton 融合 + autotune + Split-K 并行 + evict_first cache 提示 |
 
+
+## 优化轨迹图
+
+### Task01 engram_hash（~3.47x）
+![Task01 优化轨迹](task01_engram_hash/task01_progress.png)
+
+### Task02 Indexer（~1.875x）
+![Task02 优化轨迹](task02_indexer/task02_progress.png)
+
+### Task03 norm_fn（~3.5x）
+![Task03 优化轨迹](task03_norm_fn/task03_progress.png)
+
 ## 目录结构
 
 每个任务目录包含：
